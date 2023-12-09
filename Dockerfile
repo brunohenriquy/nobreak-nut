@@ -17,8 +17,8 @@ RUN apt-get update && \
 COPY ups.conf /etc/nut/ups.conf
 COPY upsd.conf /etc/nut/upsd.conf
 COPY nut.conf /etc/nut/nut.conf
-COPY startup.sh /usr/local/bin/startup-script.sh
-#RUN chmod +x /usr/local/bin/startup-script.sh
+COPY startup.sh /usr/local/bin/startup.sh
+#RUN chmod +x /usr/local/bin/startup.sh
 
 # Entry point
 # Start the NUT service in the foreground and run the custom script
