@@ -4,9 +4,9 @@ FROM debian
 ARG USER_ID
 ARG GROUP_ID
 
-## Create a non-root user with the specified IDs
-#RUN groupadd -g $GROUP_ID nut && \
-#    useradd -u $USER_ID -g $GROUP_ID -m -s /bin/bash nut
+# Create a non-root user with the specified IDs
+RUN groupadd -g $GROUP_ID nut && \
+    useradd -u $USER_ID -g $GROUP_ID -m -s /bin/bash nut
 
 # Install dependencies and NUT packages
 RUN apt-get update && \
