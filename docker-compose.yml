@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nut-container:
+    container_name: nut-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+#    restart: always
+    stdin_open: true
+    tty: true
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
+
