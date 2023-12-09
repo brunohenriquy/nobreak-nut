@@ -6,9 +6,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        USER_ID: 1000  # Set the desired user ID
-        GROUP_ID: 1000  # Set the desired group ID
+#      args:
+#        USER_ID: 1000  # Set the desired user ID
+#        GROUP_ID: 1000  # Set the desired group ID
 #    restart: always
     stdin_open: true
     tty: true
