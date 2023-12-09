@@ -22,4 +22,4 @@ COPY startup.sh /usr/local/bin/startup.sh
 
 # Entry point
 # Start the NUT service in the foreground and run the custom script
-CMD ["/usr/local/bin/startup.sh"]
+CMD ["/bin/bash"]
