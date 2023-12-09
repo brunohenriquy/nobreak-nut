@@ -10,5 +10,5 @@ services:
     stdin_open: true
     tty: true
     devices:
-      - /dev/bus/usb:/dev/bus/usb
+      - /dev/ttyACM0:/dev/ttyACM0
 
