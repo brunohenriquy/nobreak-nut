@@ -6,12 +6,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        USER_ID: 0  # Set the desired user ID
-        GROUP_ID: 20  # Set the desired group ID
+#      args:
+#        USER_ID: 0  # Set the desired user ID
+#        GROUP_ID: 20  # Set the desired group ID
 #    restart: always
     stdin_open: true
     tty: true
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
+    privileged: true
 
