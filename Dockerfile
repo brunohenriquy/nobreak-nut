@@ -22,4 +22,4 @@ COPY startup.sh /usr/local/bin/startup-script.sh
 
 # Entry point
 # Start the NUT service in the foreground and run the custom script
-CMD ["/sbin/upsd", "-D", "-u", "root", "&&", "/usr/local/bin/startup.sh"]
+CMD ["/usr/local/bin/startup.sh"]
