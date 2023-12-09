@@ -11,7 +11,13 @@ if [ $? -ne 0 ]; then
     echo "Error restarting nut-server"
 fi
 
+sleep 10
+
 upsc ups
 if [ $? -ne 0 ]; then
     echo "Error running upsc"
 fi
+
+while true; do
+  sleep 3600
+done
