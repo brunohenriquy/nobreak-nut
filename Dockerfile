@@ -14,9 +14,10 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy the custom files
-COPY ups.conf /etc/nut/ups.conf
-COPY upsd.conf /etc/nut/upsd.conf
-COPY nut.conf /etc/nut/nut.conf
+COPY ./etc/nut/ups.conf /etc/nut/ups.conf
+COPY ./etc/nut/upsd.conf /etc/nut/upsd.conf
+COPY ./etc/nut/nut.conf /etc/nut/nut.conf
+COPY ./etc/nut/upsd.users /etc/nut/upsd.users
 COPY startup.sh /usr/local/bin/startup.sh
 #RUN chmod +x /usr/local/bin/startup.sh
 
