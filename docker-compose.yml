@@ -9,7 +9,7 @@ services:
 #      args:
 #        USER_ID: 1000  # Set the desired user ID
 #        GROUP_ID: 1000  # Set the desired group ID
-    restart: always
+#    restart: always
     stdin_open: true
     tty: true
     devices:
