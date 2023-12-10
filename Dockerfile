@@ -10,7 +10,7 @@ FROM debian
 
 # Install dependencies and NUT packages
 RUN apt-get update && \
-    apt-get install -y nut-client nut-server && \
+    apt-get install -y nut-client nut-server net-tools iputils-ping && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy the custom files
