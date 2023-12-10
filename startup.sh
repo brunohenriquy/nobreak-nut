@@ -1,9 +1,15 @@
 #! /usr/bin/bash
 
 # Run custom commands after container startup
-/lib/nut/blazer_ser -a tsshara
+
+#/lib/nut/blazer_ser -a tsshara
+#if [ $? -ne 0 ]; then
+#    echo "Error running /lib/nut/blazer_ser"
+#fi
+
+/lib/nut/nutdrv_qx -a tsshara
 if [ $? -ne 0 ]; then
-    echo "Error running /lib/nut/blazer_ser"
+    echo "Error running /lib/nut/nutdrv_qx"
 fi
 
 /etc/init.d/nut-server restart
