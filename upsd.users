@@ -73,3 +73,9 @@
 #
 # See comments in the upsmon.conf(.sample) file for details about this
 # keyword and the difference of NUT secondary and primary systems.
+
+[upsmon]
+    password = "123456"
+    upsmon master
+    actions = SET
+    instcmds = ALL
