@@ -13,7 +13,7 @@ fi
 
 sleep 10
 
-upsc ups
+upsc tsshara
 if [ $? -ne 0 ]; then
     echo "Error running upsc"
 fi
