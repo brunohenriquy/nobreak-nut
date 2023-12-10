@@ -18,6 +18,8 @@ COPY ./etc/nut/ups.conf /etc/nut/ups.conf
 COPY ./etc/nut/upsd.conf /etc/nut/upsd.conf
 COPY ./etc/nut/nut.conf /etc/nut/nut.conf
 COPY ./etc/nut/upsd.users /etc/nut/upsd.users
+COPY ./etc/nut/upsmon.conf /etc/nut/upsmon.conf
+
 COPY startup.sh /usr/local/bin/startup.sh
 #RUN chmod +x /usr/local/bin/startup.sh
 
