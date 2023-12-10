@@ -14,7 +14,8 @@ services:
     tty: true
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
-    ports:
-      - "3493:3493"
+#    ports:
+#      - "3493:3493"
+    network_mode: host
 #    privileged: true
 
