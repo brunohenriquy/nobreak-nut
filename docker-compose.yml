@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  nut-container:
-    container_name: nut-container
+  nobreak-nut:
+    container_name: nobreak-nut
     build:
       context: .
       dockerfile: Dockerfile
