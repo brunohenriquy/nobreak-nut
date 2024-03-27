@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   nobreak-nut:
     container_name: nobreak-nut
