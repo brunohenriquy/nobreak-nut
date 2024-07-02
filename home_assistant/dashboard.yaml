@@ -1,0 +1,87 @@
+views:
+  - title: Home
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: vertical-stack
+            title: Nobreak
+            cards:
+              - type: conditional
+                conditions:
+                  - condition: state
+                    entity: sensor.tsshara_status_data
+                    state_not: unavailable
+                card:
+                  type: grid
+                  square: false
+                  columns: 3
+                  cards:
+                    - type: custom:button-card
+                      entity: sensor.tsshara_status_data
+                      name: Status
+                      icon: |
+                        [[[
+                          if (entity.state === 'OL') return 'mdi:power-plug';
+                          if (entity.state === 'OB') return 'mdi:car-battery';
+                          return 'mdi:help-circle-outline';
+                        ]]]
+                      styles:
+                        icon:
+                          - color: |
+                              [[[
+                                return entity.state === 'OL' ? 'green' : entity.state === 'OB' ? 'red' : '';
+                              ]]]
+                    - type: gauge
+                      name: Battery %
+                      entity: sensor.tsshara_battery_charge
+                      min: 0
+                      severity:
+                        green: 100
+                        yellow: 50
+                        red: 0
+                      max: 100
+                    - type: gauge
+                      name: Load
+                      entity: sensor.tsshara_load
+                      min: 0
+                      max: 100
+                      severity:
+                        green: 0
+                        yellow: 50
+                        red: 80
+                    - type: gauge
+                      name: Temp
+                      entity: sensor.tsshara_ups_temperature
+                      min: 0
+                      max: 100
+                      severity:
+                        green: 0
+                        yellow: 30
+                        red: 50
+                    - type: gauge
+                      name: Input Voltage
+                      entity: sensor.tsshara_input_voltage
+                      min: 0
+                      max: 240
+                      severity:
+                        green: 0
+                        yellow: 230
+                        red: 240
+                    - type: gauge
+                      name: Output Voltage
+                      entity: sensor.tsshara_output_voltage
+                      min: 0
+                      max: 240
+                      severity:
+                        green: 0
+                        yellow: 230
+                        red: 240
+                      unit: V
+              - type: conditional
+                conditions:
+                  - condition: state
+                    entity: sensor.tsshara_status_data
+                    state: unavailable
+                card:
+                  type: markdown
+                  content: Nobreak is not available
