@@ -2,7 +2,8 @@
 
 `nobreak-nut` is a Docker-based solution for managing and monitoring uninterruptible power supplies (UPS) using Network UPS Tools (NUT). There are also instructions and a dashboard example to be used in Home Assistant to display the UPS data.
 
-<img src="images/dashboard.png" alt="drawing" width="400"/>
+<img src="images/dashboard_line.png" alt="drawing" width="400"/>
+<img src="images/dashboard_bat.png" alt="drawing" width="400"/>
 
 ## Table of Contents
 
@@ -63,7 +64,8 @@ To interact with the running nobreak-nut container, use the NUT tools or the Hom
    <img src="images/nut_config.png" alt="drawing" width="200"/>
 
 #### The Dashboard example can be found [here](home_assistant/dashboard.yaml)
-<img src="images/dashboard.png" alt="drawing" width="300"/>
+<img src="images/dashboard_line.png" alt="drawing" width="300"/>
+<img src="images/dashboard_bat.png" alt="drawing" width="300"/>
 
 ### Contributing
 Feel free to contribute by opening issues, suggesting features, or submitting pull requests.
