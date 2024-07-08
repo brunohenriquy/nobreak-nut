@@ -26,11 +26,18 @@ views:
                           return 'mdi:help-circle-outline';
                         ]]]
                       styles:
+                        name:
+                          - font-size: 15px
+                        card:
+                          - height: 136px
+                          - padding-bottom: 23px
                         icon:
                           - color: |
                               [[[
-                                return entity.state === 'OL' ? 'green' : entity.state === 'OB' ? 'red' : '';
+                                return entity.state === 'OL' ? 'var(--success-color)' : entity.state === 'OB' ? 'red' : '';
                               ]]]
+                          - width: 100%
+                          - margin-top: 5%
                     - type: gauge
                       name: Battery %
                       entity: sensor.tsshara_battery_charge
