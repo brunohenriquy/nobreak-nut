@@ -15,4 +15,10 @@ services:
 #    ports:
 #      - "3493:3493"
     network_mode: host
+    healthcheck:
+      test: ["CMD", "upsc", "tsshara", "ups.status"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 1m00s
 
