@@ -8,6 +8,10 @@ FROM debian
 #RUN groupadd -g $GROUP_ID nut && \
 #    useradd -u $USER_ID -g $GROUP_ID -m -s /bin/bash nut
 
+RUN groupadd -r nut && \
+    useradd -r -g nut -m -s /usr/sbin/nologin nut && \
+    usermod -aG dialout nut
+
 # Install dependencies and NUT packages
 RUN apt-get update && \
     apt-get install -y nut-client nut-server net-tools iputils-ping && \
