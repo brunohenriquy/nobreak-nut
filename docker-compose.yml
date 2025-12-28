@@ -4,21 +4,23 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-#      args:
-#        USER_ID: 1000  # Set the desired user ID
-#        GROUP_ID: 1000  # Set the desired group ID
     restart: always
     stdin_open: true
     tty: true
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
+#      - /dev/ttyUSB0:/dev/ttyUSB0
 #    ports:
 #      - "3493:3493"
     network_mode: host
+    volumes:
+      - ./config:/config:ro
+    environment:
+      - UPS_PROFILE=tsshara   # or sms
     healthcheck:
       test: ["CMD", "upsc", "tsshara", "ups.status"]
+#      test: ["CMD", "upsc", "sms", "ups.status"]
       interval: 10s
       timeout: 10s
       retries: 5
       start_period: 1m00s
-
