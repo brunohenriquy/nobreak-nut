@@ -14,7 +14,7 @@ services:
 #      - "3493:3493"
     network_mode: host
     volumes:
-      - ./config:/config:ro
+      - .config:/config:ro
     environment:
       - UPS_PROFILE=sms   # or tsshara
     healthcheck:
